@@ -4,17 +4,20 @@ import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import org.shown.Person;
 import org.shown.PersonData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
 /**
 * @Title: TransformCase
-* @Description: TODO
+* @Description: 转换
 * @author xiao.wang
 * @date 2018/3/21
 * @version V1.0
 */
 public class TransformCase {
+    private static Logger logger = LoggerFactory.getLogger(TransformCase.class.getClass());
     public static void main(String[] args) {
         List<Person> testData = PersonData.getTestData();
         List<Integer> transform = Lists.transform(testData, new Function<Person, Integer>() {
@@ -32,7 +35,7 @@ public class TransformCase {
             }
         });
 
-        System.out.println(transform);
-        System.out.println(transform2);
+        logger.debug("transform 抓取所有id: {} ",transform);
+        logger.debug("transform2 所有Person更新为10: {}",transform2);
     }
 }
