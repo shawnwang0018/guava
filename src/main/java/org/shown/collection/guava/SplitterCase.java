@@ -6,11 +6,14 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
+
 /**
- *
- * @author WSH8690
- * @date 2018/3/1
- */
+* @Title: SplitterCase
+* @Description: 字符串分割组成新的List
+* @author xiao.wang
+* @date 2018/3/21
+* @version V1.0
+*/
 public class SplitterCase {
     private static Logger logger = LoggerFactory.getLogger(SplitterCase.class.getClass());
     public static void main(String[] args) {

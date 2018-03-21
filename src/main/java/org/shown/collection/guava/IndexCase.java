@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
 * @Title: IndexCase
-* @Description:
+* @Description: 提取属性作为key转换为Map
 * @author xiao.wang
 * @date 2018/3/21
 * @version V1.0
@@ -30,7 +30,6 @@ public class IndexCase {
         });
         ImmutableMap<Integer, Collection<Person>> integerCollectionImmutableMap = index.asMap();
         logger.debug("integerCollectionImmutableMap : {}" +integerCollectionImmutableMap);
-
     }
 
 }
