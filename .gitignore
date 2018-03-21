@@ -1,0 +1,17 @@
+/logs
+/.settings/
+/.settings/*
+/.project
+/target/
+/.classpath
+/target/*
+/*.iml
+/*.ipr
+/*.iws
+/*.idea/vcs.xml
+/*.idea/*.iml
+/.idea/*
+/.metadata*
+/.velocity.log
+/velocity.log
+/.recommenders/*
