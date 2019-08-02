@@ -1,4 +1,4 @@
-package org.shown.collection.guava;
+package org.shawn.collection.guava;
 
 import java.util.Collection;
 import java.util.Map;

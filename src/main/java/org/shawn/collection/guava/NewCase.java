@@ -1,4 +1,4 @@
-package org.shown.collection.guava;
+package org.shawn.collection.guava;
 
 import java.util.List;
 import java.util.Set;
@@ -19,7 +19,7 @@ import com.google.common.collect.Sets;
  * @date 2018/3/21
  */
 public class NewCase {
-    private static org.slf4j.Logger logger = LoggerFactory.getLogger(SplitterCase.class.getClass());
+    private static org.slf4j.Logger logger = LoggerFactory.getLogger(SplitterCase.class);
     public static void main(String[] args) {
         // 普通Collection的创建
         List<String> list = Lists.newArrayList();

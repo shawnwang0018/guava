@@ -1,4 +1,4 @@
-package org.shown.collection.guava;
+package org.shawn.collection.guava;
 
 import com.google.common.base.Splitter;
 import org.slf4j.Logger;
@@ -15,7 +15,7 @@ import java.util.List;
 * @version V1.0
 */
 public class SplitterCase {
-    private static Logger logger = LoggerFactory.getLogger(SplitterCase.class.getClass());
+    private static Logger logger = LoggerFactory.getLogger(SplitterCase.class);
     public static void main(String[] args) {
         String str = "1-2-3-4- 5- 6 --7 ";
         List<String> list =  Splitter.on("-").omitEmptyStrings().trimResults().splitToList(str);

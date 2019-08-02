@@ -1,4 +1,4 @@
-package org.shown.collection.guava;
+package org.shawn.collection.guava;
 
 import com.google.common.collect.HashMultiset;
 import org.slf4j.Logger;
@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 * @version V1.0
 */
 public class MultisetCase {
-    private static Logger logger = LoggerFactory.getLogger(MultisetCase.class.getClass());
+    private static Logger logger = LoggerFactory.getLogger(MultisetCase.class);
     public static void main(String[] args) {
         HashMultiset<String> set = HashMultiset.create();
         set.add("guava");

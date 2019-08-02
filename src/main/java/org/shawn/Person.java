@@ -1,7 +1,11 @@
 /**
  * 测试用的Demo类
  */
-package org.shown;
+package org.shawn;
+
+import org.apache.commons.lang.builder.ToStringBuilder;
+
+import java.util.Date;
 
 /**
 * @Title: Person
@@ -15,6 +19,7 @@ public class Person {
 	private String name;
 	private int age;
 	private String city;
+	private Date birthDay;
 
 	public Person() {
 	}
@@ -29,6 +34,14 @@ public class Person {
 		this.name = name;
 		this.age = age;
 		this.city = city;
+	}
+
+	public Person(int id, String name, int age, String city, Date birthDay) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.city = city;
+		this.birthDay = birthDay;
 	}
 
 	public int getId() {
@@ -67,13 +80,20 @@ public class Person {
 		return "ID= " + id + "; Name= " + name + "; Age= " + age + "; City= " + city;
 	}
 
-    @Override
+	public Date getBirthDay() {
+		return birthDay;
+	}
+
+	public void setBirthDay(Date birthDay) {
+		this.birthDay = birthDay;
+	}
+
+	@Override
     public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", city='" + city + '\'' +
-                '}';
+	    return ToStringBuilder.reflectionToString(this);
     }
+
+    public Person buildNullPerson(){
+		return null;
+	}
 }

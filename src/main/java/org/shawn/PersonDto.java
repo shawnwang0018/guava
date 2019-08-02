@@ -1,7 +1,7 @@
 /**
  * 测试用的Demo类的转换类
  */
-package org.shown;
+package org.shawn;
 
 /**
 * @Title: PersonDto
