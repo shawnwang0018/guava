@@ -33,7 +33,7 @@ public class ListToMapCase {
                 collect(Collectors.toMap(Person::getId, Person::getBirthDay));
         bMap.forEach((k, v) -> logger.debug("key : {} , value: {}", k, v));
 
-        // key:age value:person
+        // key:age value:List<person>
         Map<Integer, List<Person>> collect = testData.stream().
                 collect(Collectors.groupingBy(Person::getAge, Collectors.toList()));
         collect.forEach((k, v) -> logger.debug("key: {}, value: {}", k, v));

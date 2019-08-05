@@ -22,7 +22,7 @@ public class LimitCase {
         List<Person> testData = PersonData.getTestData();
         List<Person> collect = testData.stream().limit(3).collect(Collectors.toList());
         testData.forEach(person -> logger.debug("person : {}",person));
-        logger.debug("");
+        logger.debug("limit 3");
         collect.forEach(person -> logger.debug("person : {}",person));
     }
 

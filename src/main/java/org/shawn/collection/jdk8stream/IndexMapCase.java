@@ -22,5 +22,8 @@ public class IndexMapCase {
         List<Integer> collect = testData.stream().
                 map(Person::getAge).collect(Collectors.toList());
         logger.debug("collect : {}",collect);
+        List<Integer> collect1 = testData.stream().
+                map(Person::getAge).distinct().collect(Collectors.toList());
+        logger.debug("collect1 : {}",collect1);
     }
 }
