@@ -20,6 +20,7 @@ public class MultiMapCase {
     private static Logger logger = LoggerFactory.getLogger(MultiMapCase.class.getClass());
     public static void main(String[] args) {
 
+
         Multimap<String,Integer> map = LinkedHashMultimap.create();
         map.put("k1", 1);
         map.put("k1", 2);

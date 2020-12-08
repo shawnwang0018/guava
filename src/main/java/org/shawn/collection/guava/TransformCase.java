@@ -1,6 +1,5 @@
 package org.shawn.collection.guava;
 
-import com.google.common.base.Function;
 import com.google.common.collect.Lists;
 import org.shawn.Person;
 import org.shawn.PersonData;
@@ -9,7 +8,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 /**
 * @Title: TransformCase

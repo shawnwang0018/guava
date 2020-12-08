@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 * @date 2019-08-01
 * @version V1.0
 */
-public class SortedCase {
+public class SortedCase extends OptionalCase{
     private static Logger logger = LoggerFactory.getLogger(SortedCase.class);
     public static void main(String[] args) {
         List<Person> testData = PersonData.getTestData();
@@ -31,5 +31,7 @@ public class SortedCase {
         List<Person> collect2 = testData.stream().
                 sorted((o1, o2) -> o2.getAge() - o1.getAge()).collect(Collectors.toList());
         collect2.forEach((person) -> logger.debug("降序person : {}",person));
+        new SortedCase().println();
     }
+
 }

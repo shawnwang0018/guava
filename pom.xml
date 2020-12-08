@@ -31,7 +31,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>18.0</version>
+            <version>29.0-jre</version>
         </dependency>
 
         <dependency>
@@ -62,6 +62,30 @@
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
 					<showWarnings>true</showWarnings>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<!-- 方式二：跳过clean -->
+					<skip>true</skip>
+
+					<filesets>
+						<!-- 删除文件夹generated -->
+						<fileset>
+							<directory>src/main/generated</directory>
+						</fileset>
+						<!-- 删除mozq文件夹中符合条件的，但是不会删除mozq文件夹 -->
+						<fileset>
+							<directory>src/main/mozq</directory>
+							<includes>
+								<include>*.txt</include>
+							</includes>
+						</fileset>
+					</filesets>
 				</configuration>
 			</plugin>
 		</plugins>

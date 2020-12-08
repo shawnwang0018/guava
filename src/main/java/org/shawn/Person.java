@@ -17,7 +17,7 @@ import java.util.Date;
 public class Person {
 	private int id;
 	private String name;
-	private int age;
+	private Integer age;
 	private String city;
 	private Date birthDay;
 
@@ -36,7 +36,7 @@ public class Person {
 		this.city = city;
 	}
 
-	public Person(int id, String name, int age, String city, Date birthDay) {
+	public Person(int id, String name, Integer age, String city, Date birthDay) {
 		this.id = id;
 		this.name = name;
 		this.age = age;
@@ -60,11 +60,11 @@ public class Person {
 		this.name = name;
 	}
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 

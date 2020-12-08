@@ -4,6 +4,8 @@ import org.shawn.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Date;
+import java.util.Objects;
 import java.util.Optional;
 
 /**
@@ -21,8 +23,13 @@ public class OptionalCase {
      */
     public static void main(String[] args) {
         Person person = new Person().buildNullPerson();
+
         Optional<Person> personOptional = Optional.ofNullable(person);
         logger.debug("personOptional.isPresent(): {}",personOptional.isPresent());
+    }
+
+    void println(){
+        System.out.println(this.getClass().getName());
     }
 
 }

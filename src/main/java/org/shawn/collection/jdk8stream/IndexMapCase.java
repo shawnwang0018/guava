@@ -5,7 +5,9 @@ import org.shawn.PersonData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -24,6 +26,13 @@ public class IndexMapCase {
         logger.debug("collect : {}",collect);
         List<Integer> collect1 = testData.stream().
                 map(Person::getAge).distinct().collect(Collectors.toList());
-        logger.debug("collect1 : {}",collect1);
+        logger.debug("collect 1: {}",collect1);
+        Optional<Integer> reduce = testData.stream().map(Person::getAge).distinct().reduce(Integer::sum);
+        logger.debug("collect1 : {}",reduce.get());
+        int result= 0;
+        for (int i = 1 ; i<= 100 ;i++){
+            result = result + i;
+        }
+        System.out.println(result);
     }
 }

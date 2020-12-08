@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 public class FilterCase {
     private static final int AGE_LIMIT = 18;
     private static Logger logger = LoggerFactory.getLogger(ListToMapCase.class);
+    private static Person person;
 
     public static void main(String[] args) {
         List<Person> testData = PersonData.getTestData();
@@ -34,6 +35,7 @@ public class FilterCase {
     }
 
     private static boolean test(Person person) {
+        FilterCase.person = person;
         return person.getAge() >= AGE_LIMIT;
     }
 }
