@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
@@ -26,6 +27,8 @@ public class FilterCase {
         // 提取年龄大于18岁的person
         List<Person> collect = testData.stream().
                 filter(FilterCase::test).collect(Collectors.toList());
+        List<Person> collect1 = testData.stream().
+                filter(person -> person.getAge() > AGE_LIMIT).collect(Collectors.toList());
         collect.forEach(FilterCase::accept);
     }
 
