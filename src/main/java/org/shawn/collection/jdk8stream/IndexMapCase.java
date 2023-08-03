@@ -28,9 +28,11 @@ public class IndexMapCase {
                 map(Person::getAge).distinct().collect(Collectors.toList());
         logger.debug("collect 1: {}",collect1);
         Optional<Integer> reduce = testData.stream().map(Person::getAge).distinct().reduce(Integer::sum);
+        Optional<Integer> reduce1 = testData.stream().map(Person::getAge).reduce(Integer::sum);
         logger.debug("collect1 : {}",reduce.get());
+        logger.debug("collect2 : {}",reduce1.get());
         int result= 0;
-        for (int i = 1 ; i<= 100 ;i++){
+        for (int i = 0 ; i<= 100 ;i++){
             result = result + i;
         }
         System.out.println(result);

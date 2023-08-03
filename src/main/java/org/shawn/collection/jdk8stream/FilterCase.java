@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
  * @date 2019-08-02
  */
 public class FilterCase {
-    private static final int AGE_LIMIT = 18;
+    private static final int AGE_LIMIT = 13;
     private static Logger logger = LoggerFactory.getLogger(ListToMapCase.class);
     private static Person person;
 
@@ -27,6 +27,10 @@ public class FilterCase {
         // 提取年龄大于18岁的person
         List<Person> collect = testData.stream().
                 filter(FilterCase::test).collect(Collectors.toList());
+        int sum = testData.stream().
+                filter(FilterCase::test).mapToInt(Person::getId).sum();
+        System.out.println(collect);
+        System.out.println(sum);
         List<Person> collect1 = testData.stream().
                 filter(person -> person.getAge() > AGE_LIMIT).collect(Collectors.toList());
         collect.forEach(FilterCase::accept);
@@ -39,6 +43,6 @@ public class FilterCase {
 
     private static boolean test(Person person) {
         FilterCase.person = person;
-        return person.getAge() >= AGE_LIMIT;
+        return person.getAge() <= AGE_LIMIT;
     }
 }

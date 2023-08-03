@@ -22,6 +22,7 @@ public class ListToMapCase {
     private static Logger logger = LoggerFactory.getLogger(ListToMapCase.class);
 
     public static void main(String[] args) {
+        System.setProperty("sun.rmi.transport.tcp.responseTimeout","5000");
         List<Person> testData = PersonData.getTestData();
         // key:id  value:person
         Map<Integer, Person> map = testData.stream().
@@ -37,9 +38,10 @@ public class ListToMapCase {
         Map<Integer, List<Person>> collect = testData.stream().
                 collect(Collectors.groupingBy(Person::getAge, Collectors.toList()));
         collect.forEach((k, v) -> logger.debug("key: {}, value: {}", k, v));
+
+        testData.forEach(person -> {});
         // key:age value:person
 /*        Map<Integer, Person> cMap = testData.stream().collect(Collectors.toMap(Person::getAge, person -> person));
         cMap.forEach((k, v) -> logger.debug("key : {} , value: {}", k, v));*/
-
     }
 }
